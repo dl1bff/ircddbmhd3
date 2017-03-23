@@ -74,7 +74,7 @@ rm -rf %{buildroot}
 %attr(755,root,root) %{_sbindir}/%{name}
 %_unitdir/%{name}.service
 %_presetdir/51-%{name}.preset
-%doc README COPYING LICENSE
+%doc README.md COPYING LICENSE
 
 
 
