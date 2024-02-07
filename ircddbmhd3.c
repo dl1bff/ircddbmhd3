@@ -550,7 +550,7 @@ static void process_packet ( const u_char * packet, int len )
 
   unsigned short dstar_data_len = ntohs(dh->dstar_data_len);
 
-  if ((dstar_data_len + (sizeof(struct dstar_header))) != (udp_len - (sizeof (struct udphdr))))
+  if ((dstar_data_len + (sizeof(struct dstar_header))) > (udp_len - (sizeof (struct udphdr))))
   {
     // printf ("unexpected dstar packet len %d %d %lu %lu\n", dstar_data_len, udp_len,
     //  (sizeof(struct dstar_header)) , (sizeof (struct udphdr)) );
